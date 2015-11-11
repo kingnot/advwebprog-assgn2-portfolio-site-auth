@@ -28,7 +28,7 @@ module.exports = function(passport) {
 		process.nextTick(function() {
 			User.findOne({
 				'username': username
-			}), function(err, user) {
+			}, function(err, user) {
 				if(err) {
 					return done(err);
 				}
@@ -45,7 +45,7 @@ module.exports = function(passport) {
 				
 				// everything is ok - proceed with login
 				return done(null, user);
-			}
+			});
 		});
 	}));
 	
