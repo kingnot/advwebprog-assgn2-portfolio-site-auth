@@ -59,7 +59,7 @@ div.cover p.lead {
     font-size: 23px;
 }
 
-div.container {
+.container {
     height: 650px;
     background-color: #03E8BA;
     padding-top: 80px;
@@ -85,6 +85,10 @@ div.row {
 
 form {
     text-align: left;
+}
+
+.panel-info {
+    color: #2E6DA4;
 }
 
 /*For Footer Part Styles*/

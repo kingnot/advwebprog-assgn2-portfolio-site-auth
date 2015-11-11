@@ -8,12 +8,16 @@ var router = express.Router();
 
 /* GET Contact page */
 router.get('/', function(req, res, next) {
-    res.render('contact', { title: 'Contact Me'});
+    res.render('contact', { title: 'Contact Me',
+                          displayName: req.user ? req.user.displayName : ''
+                          });
 });
 
 /* POST form will render to success info page */
 router.post('/', function(req, res, next) {
-    res.render('success', { title: 'Form Submitted Successfully'});
+    res.render('success', { title: 'Form Submitted Successfully',
+                          displayName: req.user ? req.user.displayName : ''
+                          });
 });
 
 module.exports = router;

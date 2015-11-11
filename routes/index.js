@@ -8,7 +8,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'FEI WANG',
+  res.render('index', { title: 'Home',
                         message: 'My Portfolio',
                         displayName: req.user ? req.user.displayName : ''
                         });
@@ -16,23 +16,31 @@ router.get('/', function(req, res, next) {
 
 /* GET index page which is the same as home page*/
 router.get('/index', function(req, res, next) {
-  res.render('index', { title: 'FEI WANG',
-                        message: 'My Portfolio'});
+  res.render('index', { title: 'Home',
+                        message: 'My Portfolio',
+                        displayName: req.user ? req.user.displayName : ''
+                        });
 });
 
 /* GET About Me page */
 router.get('/about', function(req, res, next) {
-    res.render('about', { title: 'About Me'});
+    res.render('about', { title: 'About Me',
+                          displayName: req.user ? req.user.displayName : ''
+                        });
 });
 
 /* GET Projects page */
 router.get('/project', function(req, res, next) {
-    res.render('project', { title: 'Projects'});
+    res.render('project', { title: 'Projects',
+                          displayName: req.user ? req.user.displayName : ''
+                          });
 });
 
 /* GET Services page */
 router.get('/service', function(req, res, next) {
-    res.render('service', { title: 'Services'});
+    res.render('service', { title: 'Services',
+                          displayName: req.user ? req.user.displayName : ''
+                          });
 });
 
 /* Render Login page. */
