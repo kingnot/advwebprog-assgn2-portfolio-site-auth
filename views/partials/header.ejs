@@ -68,6 +68,12 @@
                   <a href="/">Home</a></li>
                 <li role="separator" class="divider"></li>
                 <% if (displayName) { %>
+                  <% if(title == "Businesscontact" ) { %>
+                  <li class="active">
+                <% } else { %>
+                <li>
+                  <% } %>
+                  <a href="/businesscontacts">Business Contacts</a></li>
                   <% if(title == "Users" ) { %>
                   <li class="active">
                     <% } else { %>
