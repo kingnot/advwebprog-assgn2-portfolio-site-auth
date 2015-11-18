@@ -28,7 +28,7 @@ router.get('/', requireAuth, function (req, res, next) {
                 displayName: req.user ? req.user.displayName : ''
             });
         }
-    });
+    }).sort({"contactName":1}); //sort the list by contactName in ascending
 });
 
 /* Render the Add business contact Page */
